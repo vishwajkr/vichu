@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bike Gallery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="path"></div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+        <div class="thumbnail">
+            <li><img src="bike1.png" onclick="big('bike1.png')"></li>
+            <li><img src="bike2.png" onclick="big('bike2.png')"></li>
+            <li><img src="bike3.png" onclick="big('bike3.png')"></li>
+        </div>
+        <div class="content">
+            <p>&#x1f525;Let's Ride&#x1f525;</p><br>
+            <h2>Road is only for journy<br>&nbsp; not for destination</h2><br><br>
+            <h5>Bike ride cure the broken heart</h5><br>
+        </div>
+        </div>
+</body>
+<script>
+    function big(img){
+        document.queryselector('big').src= img;
+    }
+</script>
+</html>
