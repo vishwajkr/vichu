@@ -1,0 +1,49 @@
+
+<html>
+<head>
+    <title>addition</title>
+</head>
+<body>
+    <lable>Enter the value1 :</lable><br><br>
+    <input type="text" id="n1"><br><br>
+    <lable>Enter the value2 :</lable><br><br>
+    <input type="text" id="n2"><br><br>
+    <input type="button" value="addition" onclick="add()"><br>
+    <input type="button" value="subraction" onclick="sub()"><br>
+    <input type="button" value="division" onclick="div()"><br>
+    <input type="button" value="multiplication" onclick="mul()"><br>
+    
+    <div id="res"></div>
+<script>
+    function add()
+    {
+        var n1=parseInt(document.getElementById("n1").value);
+        var n2= parseInt(document.getElementById("n2").value);
+        var sum=n1+n2;
+        document.getElementById("res").innerHTML=sum;
+
+    }
+    function sub()
+    {
+    var n1=parseInt(document.getElementById("n1").value);
+        var n2= parseInt(document.getElementById("n2").value);
+        var sum=n1-n2;
+        document.getElementById("res").innerHTML=sum;
+    }
+    function div()
+    {
+    var n1=parseInt(document.getElementById("n1").value);
+        var n2= parseInt(document.getElementById("n2").value);
+        var sum=n1/n2;
+        document.getElementById("res").innerHTML=sum;
+    }
+    function mul()
+    {
+    var n1=parseInt(document.getElementById("n1").value);
+        var n2= parseInt(document.getElementById("n2").value);
+        var sum=n1*n2;
+        document.getElementById("res").innerHTML=sum;
+    }
+</script>
+</body>
+</html>
