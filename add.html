@@ -1,24 +1,56 @@
 
 <html>
-<head>
-    <title>addition</title>
-</head>
-<body>
-    <lable>Enter the value1 :</lable><br><br>
-    <input type="text" id="n1"><br><br>
-    <lable>Enter the value2 :</lable><br><br>
-    <input type="text" id="n2"><br><br>
-    
-    <div id="res"></div>
-    <label for="enter the value"></label>
-    <select name="option">
-        
-        <option value="add">addition</option>
-        <option value="sub">subraction</option>
-        <option value="mul">multiplication</option>
-        <option value="div">division</option>
-      </select>
-    <input type="submit" value="submit">
-</script>
-</body>
-</html>
+    <head>
+        <title>addition</title>
+
+
+        <script>
+
+            function calc()
+            {
+                var n1=parseInt(document.getElementById('n1').value);
+                var n2=parseInt(document.getElementById('n2').value);
+                var operators=document.getElementById('operators').value;
+
+                if(operators ==='+')
+                {
+                    document.getElementById('result').value = n1+n2;   
+                }
+                if(operators ==='-')
+                {
+                    document.getElementById('result').value = n1-n2;   
+                }
+                if(operators ==='*')
+                {
+                    document.getElementById('result').value = n1*n2;   
+                }
+                if(operators ==='/')
+                {
+                    document.getElementById('result').value = n1/n2;   
+                }
+            }
+        </script>
+
+
+    </head>
+    <body>
+        <lable>Enter the value1 :</lable><br><br>
+        <input type="number" id="n1"><br><br>
+        <lable>Enter the value2 :</lable><br><br>
+        <input type="number" id="n2"><br><br>
+       
+
+        <div id="res"></div>
+        <label for="enter the value"></label>
+        <select id="operators">
+            
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button onclick="calc();">submit</button>
+        <input type="text" id="result"/>
+       
+    </body>
+    </html>
