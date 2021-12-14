@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+</head>
+<body>
+
+	
+		<table  height="70" width="30%">
+			<thead>
+				<tr>
+					<th> Name</th>
+					<td><input type="text" name="name" id="name"></td>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr>
+					<th>Email</th>
+					<td><input type="text" name="email" id="email"></td>
+				</tr>
+				<tr>
+					<th>dob</th>
+					<td><input type="text" name="dob" id="dob"></td>
+				</tr>
+				<tr id="button">
+					<td colspan="2"><input type="button" name="submit" id="button" value="submit" onclick="AddRow()"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table border height="5" id="show">
+	<thead>
+			<tr>
+			<th> Name</th>
+			<th>Email</th>
+			<th>dob</th>
+			</tr>
+	</thead>
+	</table>
+
+	
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("name").value;
+			list2[x] = document.getElementById("email").value;
+			list3[x] = document.getElementById("dob").value;
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+
+            n++;
+            x++;
+		}
+
+	</script>
+</body>
+</html>
